@@ -1,0 +1,33 @@
+1. Gerente consegue acessar nome diretamente?
+
+Não. O atributo nome está como private na classe Funcionario.
+A classe Gerente não pode acessar diretamente um atributo private da classe pai.
+
+2. Por que getNome() funciona?
+
+Porque getNome() é um método public da classe Funcionario.
+A classe Gerente pode utilizar esse método para consultar o nome.
+
+3. Gerente consegue acessar salario diretamente?
+
+Sim. O atributo salario está como protected.
+Por isso, uma classe filha como Gerente pode acessá-lo diretamente.
+
+4. Qual a diferença entre private e protected nesse exemplo?
+
+Private permite acesso somente dentro da própria classe.
+Protected permite acesso dentro da própria classe e também pelas classes filhas.
+
+5. Por que setor está como private?
+
+Para manter o encapsulamento. O atributo setor pertence à classe Gerente
+e não precisa ser acessado diretamente por outras classes.
+
+6. O que aconteceria se tentássemos fazer:
+
+System.out.println(nome);
+
+dentro de Gerente?
+
+O código apresentaria um erro de compilação, porque nome é private em Funcionario.
+Para acessar o nome, devemos utilizar o método público getNome().
